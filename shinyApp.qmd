@@ -22,7 +22,7 @@ This dashboard is a supplement to the project article ["Logistic Regression Anal
 
 The dashboard below is created with R shinylive to allow publishing the application without using a dedicated server. Instead, the application will use the computing resources of the user viewing the app. **This may result in a long loading times**.
 
-Source code to run app locally is found [in this repository](https://github.com/josh-tomiyama/logisticRegressionShiny/tree/main/test).
+Source code to run app locally is found [in this repository](https://github.com/josh-tomiyama/logisticRegressionShiny/tree/main/test){target="_blank"}.
 
 # Data Dictionary
 
@@ -48,6 +48,8 @@ $$
 ```{r}
 #| eval: false
 library(shiny)
+# Note: shinylive does not need to be loaded, only installed locally
+library(shinylive)
 library(bslib)
 library(reactable)
 library(dplyr)
