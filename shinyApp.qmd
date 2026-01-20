@@ -11,6 +11,7 @@ categories:
 format: 
   html:
     page-layout: custom
+image: "./preview.png"
 filters: 
   - shinylive
 ---
