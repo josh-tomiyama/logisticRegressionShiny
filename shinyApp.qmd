@@ -1,5 +1,13 @@
 ---
 title: "Supplemental Dashboard: Optimizing Expected Revenue"
+date: "2026-01-20"
+description: "A dashboard to supplement and summarize the Optimizing Expected Revenue project"
+categories:
+  - "R Shiny"
+  - "Dashboard"
+  - "Machine Learning"
+  - "Logistic Regression"
+  - "Optimization"
 format: 
   html:
     page-layout: custom
@@ -13,6 +21,8 @@ filters:
 This dashboard is a supplement to the project article ["Logistic Regression Analysis Example: Optimizing Expected Revenue"](../optimizingExpectedReturns/index.qmd){target="_blank"}. More details on model building is discussed there, but results and general summary of the data are presented here.
 
 The dashboard below is created with R shinylive to allow publishing the application without using a dedicated server. Instead, the application will use the computing resources of the user viewing the app. **This may result in a long loading times**.
+
+Source code to run app locally is found [in this repository](https://github.com/josh-tomiyama/logisticRegressionShiny/tree/main/test).
 
 # Data Dictionary
 
