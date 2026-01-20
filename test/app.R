@@ -1,65 +1,3 @@
----
-title: "Supplemental Dashboard: Optimizing Expected Revenue"
-format: 
-  html:
-    page-layout: custom
-filters: 
-  - shinylive
----
-
-::: panel-tabset
-# Notes
-
-This dashboard is a supplement to the project article ["Logistic Regression Analysis Example: Optimizing Expected Revenue"](../optimizingExpectedReturns/index.qmd){target="_blank"}. More details on model building is discussed there, but results and general summary of the data are presented here.
-
-The dashboard below is created with R shinylive to allow publishing the application without using a dedicated server. Instead, the application will use the computing resources of the user viewing the app. **This may result in a long loading times**.
-
-# Data Dictionary
-
--   `sold` - The outcome of interest. 0 indicates failed sale, 1 indicates successful sale
-
--   `type` - The product type. Can be either of 'accessories', 'shoes', 'clothes'.
-
--   `cost` - The cost to produce the product in USD.
-
--   `markup` - The markup percentage. A value of 20 indicates a 20% markup for sales.
-
-# Model Used
-
-The logistic regression model with the following formula:
-
-$$
-  \log(\frac{\pi_i}{1 - \pi_i}) = \beta_0 + x_{markup} * \beta_{markup} + 
-x_{cost} * \beta_{cost} + x_{type=shoes} * \beta_{type=shoes} + x_{type = clothes}*\beta_{type = clothes}
-$$
-
-# Packages Used
-
-```{r}
-#| eval: false
-library(shiny)
-library(bslib)
-library(reactable)
-library(dplyr)
-library(ggplot2)
-library(future.apply)
-library(scales)
-library(knitr)
-library(kableExtra)
-library(gt)
-library(gtsummary)
-library(plotly)
-library(bsicons)
-library(htmltools)
-```
-
-:::
-
-## Dashboard
-
-```{shinylive-r}
-#| standalone: TRUE
-#| viewerHeight: 800
 library(shiny)
 library(bslib)
 library(reactable)
@@ -770,5 +708,3 @@ server <- function(input, output) {
 
 # Run the app ----
 shinyApp(ui = ui, server = server)
-```
-
